@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .video-carousel {
+        width: 90%; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        margin-left: 5%; /* Add space on the left side */
+        font-size: 0;
+      }
+
+      .video-carousel-end {
+        width: 90%; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        margin-left: 5%; /* Add space on the left side */
+        font-size: 0;
+      }
+
+      .video-slide {
+        width: auto; /* 1/5 of the container */
+        height: 100%;
+        margin: 0 10px 0 0; /* add 10px gap on the right */
+        padding: 0;
+      }
+
+      .video-slide-end {
+        width: 210px; /* 1/5 of the container */
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .teaser-image {
+        /* up space */
+        display: block; /* Ensures image takes up full width of its container */
+        max-width: 100%; /* Ensures image doesn't exceed its container width */
+        height: auto; /* Preserves aspect ratio of the image */
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+
+    <title>RL Environments Demonstration Example</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title">
+                {Company} RL Demonstration Example
+              </h1>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a
+                    href="https://www.linkedin.com/in/theo-moore-calters/"
+                    target="_blank"
+                    >Theo Moore-Calters</a
+                  >,
+                </span>
+                <span class="author-block">
+                  <a
+                    href="https://research.mels.ai/ide?mels=UnitreeG1.3gwz1"
+                    target="_blank"
+                    >Vijay</a
+                  >,
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">{company}</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a
+                      class="button is-normal is-rounded is-dark"
+                      href="https://github.com/i1Cps/simple-RJX/blob/main/README.md"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="video-carousel">
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/sprint_humanoid.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/sprint_quadruped.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/longjump_humanoid.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/fetch_quadruped.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/sprint_humanoid.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/sprint_quadruped.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/longjump_humanoid.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/fetch_quadruped.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/sprint_humanoid.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/sprint_quadruped.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/longjump_humanoid.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/fetch_quadruped.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- </div> -->
+    <script src="./static/js/rolling-video.js"></script>
+    <script src="./static/js/rolling-video-end.js"></script>
+    <section class="hero is-light">
+      <br />
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column" style="padding: 0 40px">
+            <h2 class="title is-3">Simple-RJX Overview</h2>
+            <div class="content has-text-justified">
+              <p>
+                Simple-RJX is a collection of robotics-based MJX environments
+                designed for end-to-end training using reinforcement learning.
+              </p>
+              <ul>
+                <li>Built for simplicity</li>
+                <li>
+                  Powered by Brax (a well-respected JAX-based RL training
+                  framework)
+                </li>
+                <li>
+                  Each environment can be viewed live online using our {company} 
+                  links
+                </li>
+              </ul>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-text-justified">
+      <div class="container is-max-desktop">
+        <!--/ Method. -->
+        <div class="columns is-centered">
+          <div class="column">
+            <h2 class="title is-3">Our Research Mels</h2>
+          </div>
+        </div>
+
+        <!-- Side-by-side model images -->
+        <div>
+          <div style="width: 48%; float: left; margin-right: 2%;">
+            <img
+              src="./static/images/humanoid.png"
+              alt="Quadruped Model"
+              style="display: block; width: 100%; height: auto;"
+            />
+            <p style="text-align: center; margin-top: 0.5rem;">
+              Humanoid Model
+            </p>
+          </div>
+          <div style="width: 48%; float: right; margin-left: 2%;">
+            <img
+              src="./static/images/quadruped.png"
+              alt="Humanoid Model"
+              style="display: block; width: 100%; height: auto;"
+            />
+            <p style="text-align: center; margin-top: 0.5rem;">
+              Quadruped Model
+            </p>
+          </div>
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <div>
+          <div style="width: 48%; float: left; margin-right: 2%;">
+            <div class="content">
+              <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                <li>Actuators: 17 </li>
+                <li> Degrees of Freedom: 24 </li>
+                <li>Locomotion observation shape: 276</li>
+                <ul style="list-style-type: circle; margin-left: 1.5rem;">
+                  <li>Joint positions: 22</li>
+                  <li>Joint velocities: 23</li>
+                  <li>Inertia on each body: 170</li>
+                  <li>Global velocities on each body: 78</li>
+                  <li>Actuator forces: 23</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <div style="width: 48%; float: right; margin-left: 2%;">
+            <div class="content">
+              <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                <li>Actuators: 12 </li>
+                <li> Degrees of Freedom: 15 </li>
+                <li>Locomotion observation shape: 27</li>
+                <ul style="list-style-type: circle; margin-left: 1.5rem;">
+                  <li>Joint positions: 13</li>
+                  <li>Joint velocities: 14</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <hr />
+        
+        We have a catalogue of environments for you to try out, from sprints to longjump .... further build up
+        <br />
+        <br />
+        <h2 class="subtitle is-4" style="text-align: center">Locomotion</h2>
+        <div class="column is-centered">
+          <img
+            src="./static/images/environments/collage.png"
+            alt="teaser"
+            class="teaser-image"
+          />
+        </div>
+        <hr />
+        <div class="columns is-centered">
+          <div class="column">
+            <h2 class="title is-3">Simulation Environment</h2>
+          </div>
+        </div>
+
+        <div>
+          <div style="width: 49%; float: left">
+            <div class="video_grid_item">
+              <video
+                class="grid-video training"
+                autoplay
+                muted
+                loop
+                playsinline
+                width="100%"
+              >
+                <source
+                  src="./static/videos/longjump_humanoid.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="is-centered">
+              <p style="text-align: center">
+                Long Jump policy by Humanoid
+              </p>
+            </div>
+          </div>
+          <div style="width: 49%; float: right">
+            <div class="video_grid_item">
+              <video
+                class="grid-video training"
+                autoplay
+                muted
+                loop
+                playsinline
+                width="100%"
+              >
+                <source
+                  src="./static/videos/fetch_quadruped.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <div class="is-centered">
+                <p style="text-align: center">
+                  Fetch policy by Quadruped
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="width: 49%; float: left">
+            <div class="video_grid_item">
+              <video
+                class="grid-video training"
+                autoplay
+                muted
+                loop
+                playsinline
+                width="100%"
+              >
+                <source
+                  src="./static/videos/sprint_humanoid.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="is-centered">
+              <p style="text-align: center">
+                Sprint policy by Humanoid
+              </p>
+            </div>
+          </div>
+          <div style="width: 49%; float: right">
+            <div class="video_grid_item">
+              <video
+                class="grid-video training"
+                autoplay
+                muted
+                loop
+                playsinline
+                width="100%"
+              >
+                <source
+                  src="./static/videos/sprint_quadruped.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <div class="is-centered">
+                <p style="text-align: center">
+                  Sprint policy by Quadruped
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+        <hr />
+
+    <footer class="custom_footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+              <p>
+                Template borrowed from
+                <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+                <a href="https://xingyu-lin.github.io/spawnnet/">SpawnNet</a>,
+                <a href="https://wuphilipp.github.io/gello_site/">Gello</a>,
+                and <a href="https://humanoid-bench.github.io/">Humanoid-Bench</a>.
+              </p>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
