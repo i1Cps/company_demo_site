@@ -56,7 +56,7 @@
       }
     </style>
 
-    <title>Simple-RJX</title>
+    <title>Simple-LJX</title>
 
     <link
       href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -87,7 +87,7 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-2 publication-title">
-                Simple-RJX
+                Simple-LJX
               </h1>
 
               <div class="is-size-5 publication-authors">
@@ -143,13 +143,13 @@
         <source src="./static/videos/low_res/longjump_humanoid.mp4" type="video/mp4" />
       </video>
       <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/low_res/longjump_quadruped.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
         <source src="./static/videos/low_res/fetch_quadruped.mp4" type="video/mp4" />
       </video>
       <video class="video-slide" playsinline autoplay loop muted>
         <source src="./static/videos/low_res/gaps_humanoid.mp4" type="video/mp4" />
-      </video>
-      <video class="video-slide" playsinline autoplay loop muted>
-        <source src="./static/videos/low_res/longjump_quadruped.mp4" type="video/mp4" />
       </video>
       <video class="video-slide" playsinline autoplay loop muted>
         <source src="./static/videos/low_res/fetch_humanoid.mp4" type="video/mp4" />
@@ -168,13 +168,13 @@
         <source src="./static/videos/low_res/longjump_humanoid.mp4" type="video/mp4" />
       </video>
       <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/low_res/longjump_quadruped.mp4" type="video/mp4" />
+      </video>
+      <video class="video-slide" playsinline autoplay loop muted>
         <source src="./static/videos/low_res/fetch_quadruped.mp4" type="video/mp4" />
       </video>
       <video class="video-slide" playsinline autoplay loop muted>
         <source src="./static/videos/low_res/gaps_humanoid.mp4" type="video/mp4" />
-      </video>
-      <video class="video-slide" playsinline autoplay loop muted>
-        <source src="./static/videos/low_res/longjump_quadruped.mp4" type="video/mp4" />
       </video>
       <video class="video-slide" playsinline autoplay loop muted>
         <source src="./static/videos/low_res/fetch_humanoid.mp4" type="video/mp4" />
@@ -193,10 +193,10 @@
         <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
           <div class="column" style="padding: 0 40px">
-            <h2 class="title is-3">Simple-RJX Overview</h2>
+            <h2 class="title is-3">Simple-LJX Overview</h2>
             <div class="content has-text-justified">
               <p>
-                Simple-RJX is a collection of robotics-based MJX environments
+                Simple-LJX is a collection of locomotion-based MJX environments
                 designed for end-to-end training using reinforcement learning.
               </p>
               <ul>
@@ -318,14 +318,14 @@
                 width="100%"
               >
                 <source
-                  src="./static/videos/med_res/longjump_quadruped.mp4"
+                  src="./static/videos/med_res/fetch_quadruped.mp4"
                   type="video/mp4"
                 />
               </video>
             </div>
             <div class="is-centered">
               <p style="text-align: center">
-                Long Jump policy by Quadruped
+                Fetch policy by Quadruped 
               </p>
             </div>
           </div>
@@ -352,6 +352,8 @@
             </div>
           </div>
         </div>
+
+        <div style="clear: both;"></div>
 
         <div>
           <div style="width: 49%; float: left">
@@ -393,12 +395,14 @@
               </video>
               <div class="is-centered">
                 <p style="text-align: center">
-                  Gaps policy by Quadruped
+                  Gaps policy by Humanoid
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <div style="clear: both;"></div>
 
         <div>
           <div style="width: 49%; float: left">
@@ -434,18 +438,20 @@
                 width="100%"
               >
                 <source
-                  src="./static/videos/med_res/fetch_quadruped.mp4"
+                  src="./static/videos/med_res/longjump_quadruped.mp4"
                   type="video/mp4"
                 />
               </video>
               <div class="is-centered">
                 <p style="text-align: center">
-                  Fetch policy by Quadruped
+                  Long Jump policy by Quadruped
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <div style="clear: both;"></div>
 
         <div>
           <div style="width: 49%; float: left">
