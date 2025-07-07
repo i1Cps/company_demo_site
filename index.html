@@ -297,6 +297,7 @@
     <!-- </div> -->
     <script src="./static/js/rolling-video.js"></script>
     <script src="./static/js/rolling-video-end.js"></script>
+    <script src="./static/js/mel_visualiser.js"></script>
 
     <br />
     <br />
@@ -342,24 +343,40 @@
         </div>
 
         <!-- Side-by-side model images -->
-        <div>
-          <div style="width: 48%; float: left; margin-right: 2%">
-            <img
-              src="./static/images/humanoid.png"
-              alt="Quadruped Model"
-              style="display: block; width: 100%; height: auto"
+        <div class="mel-viewer-row">
+          <div class="mel-viewer-block">
+            <div id="humanoid-viewer" style="margin-bottom: 1rem"></div>
+            <input
+              id="slider-humanoid"
+              type="range"
+              min="0"
+              max="7"
+              value="0"
             />
             <p style="text-align: center; margin-top: 0.5rem">Humanoid Model</p>
           </div>
-          <div style="width: 48%; float: right; margin-left: 2%">
-            <img
-              src="./static/images/quadruped.png"
-              alt="Humanoid Model"
-              style="display: block; width: 100%; height: auto"
+
+          <div class="mel-viewer-block">
+            <div id="quadruped-viewer" style="margin-bottom: 1rem"></div>
+            <input
+              id="slider-quadruped"
+              type="range"
+              min="0"
+              max="7"
+              value="0"
             />
             <p style="text-align: center; margin-top: 0.5rem">
               Quadruped Model
             </p>
+
+            <!-- <img -->
+            <!--   src="./static/images/quadruped.png" -->
+            <!--   alt="Quadruped Model" -->
+            <!--   style="display: block; width: 100%; height: auto" -->
+            <!-- /> -->
+            <!-- <p style="text-align: center; margin-top: 0.5rem"> -->
+            <!--   Quadruped Model -->
+            <!-- </p> -->
           </div>
         </div>
 
