@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     videos.forEach((video, index) => {
       let videoOffset = index * videoWidth + currentOffset;
+      if (index == 0) {
+      }
       video.style.transform = `translateX(${videoOffset}px)`;
 
       // If the video is fully out of view on the left, reset its position to the right
@@ -26,9 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    if (currentOffset <= -(totalWidth - carouselWidth)) {
-      // print curent offset
-      console.log(currentOffset);
+    if (currentOffset <= -(totalWidth / 3)) {
+      console.log("current offset", currentOffset);
+      console.log("total width", totalWidth);
+      console.log("carosoul width", carouselWidth);
       currentOffset = 0;
     }
     requestAnimationFrame(slideVideos);
@@ -46,5 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
   carousel.addEventListener("mouseout", function () {
     animationOn = true;
     slideVideos(); // Restart the animation loop
+
+    console.log("total width", totalWidth);
+    console.log("carosoul width", carouselWidth);
   });
 });
