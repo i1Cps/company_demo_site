@@ -5,8 +5,6 @@ const quadrupedImgs = [];
 function preloadMelImages() {
   for (let i = 1; i < NUM_FRAMES + 1; i++) {
     const hImg = new Image();
-    console.log("humanoid_", i);
-    console.log("wa");
     hImg.src = `./static/images/humanoid/humanoid_${i}.png`;
     hImg.style.display = "block";
     hImg.style.width = "100%";
