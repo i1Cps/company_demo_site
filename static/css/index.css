@@ -12,27 +12,27 @@ ol {
   list-style-position: inside;
 }
 
-.mel-viewer-row {
+.agent-viewer-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2%;
 }
 
-.mel-viewer-block {
+.agent-viewer-block {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
-.mel-viewer-block input[type="range"] {
+.agent-viewer-block input[type="range"] {
   display: block;
   width: 100%;
   margin: 0.5rem auto;
 }
 
-.mel-viewer-block p {
+.agent-viewer-block p {
   margin-top: 0.5rem;
   text-align: center;
 }

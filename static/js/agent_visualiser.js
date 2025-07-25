@@ -2,7 +2,7 @@ const NUM_FRAMES = 33;
 const humanoidImgs = [];
 const quadrupedImgs = [];
 
-function preloadMelImages() {
+function preloadAgentImages() {
   for (let i = 1; i < NUM_FRAMES + 1; i++) {
     const hImg = new Image();
     hImg.src = `./static/images/humanoid/humanoid_${i}.png`;
@@ -22,7 +22,7 @@ function preloadMelImages() {
   }
 }
 
-function initMelSpinners() {
+function initAgentSpinners() {
   const hViewer = document.getElementById("humanoid-viewer");
   const qViewer = document.getElementById("quadruped-viewer");
 
@@ -43,6 +43,6 @@ function initMelSpinners() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  preloadMelImages();
-  initMelSpinners();
+  preloadAgentImages();
+  initAgentSpinners();
 });
